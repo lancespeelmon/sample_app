@@ -83,7 +83,7 @@ describe "UserPages" do
         fill_in "Name",         with: "Example User"
         fill_in "Email",        with: "user@example.com"
         fill_in "Password",     with: "foobar"
-        fill_in "Confirmation", with: "mismatch"
+        fill_in "user[password_confirmation]", with: "mismatch"
         click_button submit
       end
 
@@ -102,7 +102,7 @@ describe "UserPages" do
         fill_in "Name",         with: "Example User"
         fill_in "Email",        with: "user@example"
         fill_in "Password",     with: "foobar"
-        fill_in "Confirmation", with: "foobar"
+        fill_in "user[password_confirmation]", with: "foobar"
         click_button submit
       end
 
@@ -121,7 +121,7 @@ describe "UserPages" do
         fill_in "Name",         with: "Example User"
         fill_in "Email",        with: "user@example.com"
         fill_in "Password",     with: "foobar"
-        fill_in "Confirmation", with: "foobar"
+        fill_in "user[password_confirmation]", with: "foobar"
       end
 
       it "should create a user" do
