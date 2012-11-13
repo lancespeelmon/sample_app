@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 
+  before_filter :signed_in_user, only: [:edit, :update]
+
   def show
   	@user = User.find(params[:id])
   end
@@ -23,7 +25,6 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(params[:user])
@@ -34,4 +35,11 @@ class UsersController < ApplicationController
       render 'edit'
     end
   end
+
+private
+  
+  def signed_in_user
+    redirect_to signin_url, notice: "Access Denied. Please sign in." unless signed_in?
+  end
+
 end
