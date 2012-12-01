@@ -35,4 +35,8 @@ RSpec.configure do |config|
   # the seed, which is printed after each run.
   #     --seed 1234
   config.order = "random"
+
+  # Make sure to add this to your RSpec configure block
+  # https://github.com/thoughtbot/factory_girl/wiki/Usage
+  config.include FactoryGirl::Syntax::Methods
 end
