@@ -1,4 +1,5 @@
 [![Build Status](https://secure.travis-ci.org/lancespeelmon/sample_app.png?branch=master)](https://travis-ci.org/lancespeelmon/sample_app)
+[![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/lancespeelmon/sample_app)
 
 # Ruby on Rails Tutorial: sample application
 
